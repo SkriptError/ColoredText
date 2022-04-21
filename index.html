@@ -1,11 +1,15 @@
 <html>
-<p>Hi! this Website was made by </p><b>SkriptError</b>
-<div class="text">Hello, this text changes color! don't believe me just click one of the buttons below.</div>
+<h1>Hi! this Website was made by </h1><h2>SkriptError</h2>
+<div></div>
+<form>
+<input value="Hello, this text changes color! you can also change it!" class="text">
+<div></div>
+<button onclick="Color('white')" type="reset" class="reset">Reset</button>
+</form>
 <button onclick="Color('red')">Red</button>
 <button onclick="Color('blue')" class="blue">Blue</button>
 <button onclick="Color('green')" class="green">Green</button>
-<button onclick="Color('white')" class="reset">Reset</button>
-
+<button onclick="Color('yellow')" class="yellow">Yellow</button>
 <style>
 
 body {
@@ -13,15 +17,18 @@ body {
 
 }
 
-.text {
+input {
+	color: white;
+	background: black;
+	border: black;
+	width: 725px;
+}
+
+h1 {
 	color: white;
 }
 
-p {
-	color: white;
-}
-
-b {
+h2 {
 	color: red;
 }
 
@@ -73,6 +80,22 @@ button:hover {
 
 }
 
+.yellow {
+	background-color: black;
+	color: yellow;
+	width: 200px;
+	height: 50px;
+	border: 3px solid yellow;
+	transition: ease-out 1s;
+
+}
+
+.yellow:hover {
+	box-shadow: inset 300px 0 0 0 yellow;
+	color: black;
+
+}
+
 .reset {
 	background-color: black;
 	color: white;
@@ -93,6 +116,10 @@ button:hover {
 <script>
 	function Color(color){
 		document.querySelector('.text').style.color = color;
+}
+
+	function Reset(text){
+		document.querySelector('input').value = text;
 }
 </script>
 </html>
