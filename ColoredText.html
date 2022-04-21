@@ -1,0 +1,98 @@
+<html>
+<p>Hi! this text was made by </p><b>SkriptError</b>
+<div class="text">Hello, this text changes color! don't believe me just click one of the buttons below.</div>
+<button onclick="Color('red')">Red</button>
+<button onclick="Color('blue')" class="blue">Blue</button>
+<button onclick="Color('green')" class="green">Green</button>
+<button onclick="Color('white')" class="reset">Reset</button>
+
+<style>
+
+body {
+	background-color: black;
+
+}
+
+.text {
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+b {
+	color: red;
+}
+
+button {
+	background-color: black;
+	color: red;
+	width: 200px;
+	height: 50px;
+	border: 3px solid red;
+	transition: ease-out 1s;
+
+}
+
+button:hover {
+	box-shadow: inset 300px 0 0 0 red;
+	color: black;
+
+}
+
+.blue {
+	background-color: black;
+	color: blue;
+	width: 200px;
+	height: 50px;
+	border: 3px solid blue;
+	transition: ease-out 1s;
+
+}
+
+.blue:hover {
+	box-shadow: inset 300px 0 0 0 blue;
+	color: black;
+
+}
+
+.green {
+	background-color: black;
+	color: green;
+	width: 200px;
+	height: 50px;
+	border: 3px solid green;
+	transition: ease-out 1s;
+
+}
+
+.green:hover {
+	box-shadow: inset 300px 0 0 0 green;
+	color: black;
+
+}
+
+.reset {
+	background-color: black;
+	color: white;
+	width: 200px;
+	height: 50px;
+	border: 3px solid white;
+	transition: ease-out 1s;
+
+}
+
+.reset:hover {
+	box-shadow: inset 300px 0 0 0 white;
+	color: black;
+
+}
+
+</style>
+<script>
+	function Color(color){
+		document.querySelector('.text').style.color = color;
+}
+</script>
+</html>
